@@ -1,0 +1,15 @@
+def userInfo(FName):
+    FirstName = input("Please Enter your First Name : ")
+    SecondName = input("Please Enter your Second Name : ")
+    Gender = input("Please Enter your Gender (Male OR Female) : ")
+    ID = int(input("Please Enter Your ID (3 Numbers) ONLY : "))
+    Info = [FirstName ,'\n' , SecondName , '\n', Gender , '\n', str(ID)]
+    
+    with open(FName ,'w') as f : 
+        for I in Info :
+            f.write(I)
+            
+    with open (FName , 'r') as r :
+        print (r.readlines())
+        
+userInfo("F:/Amit (AI & ML)/(1) Python/Example Session 3/p.txt")
